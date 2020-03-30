@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Example for Quattro Stagioni</title>
+
+<style>
+  body {
+    background-color: black;
+    color: white;
+  }
+
+  #season {
+    font-style: italic;
+  }
+
+  .winter {
+    color: azure;
+  }
+
+  .summer {
+    color: coral;
+  }
+
+  .spring {
+    color: purple;
+  }
+
+  .autumn {
+    color: peru;
+  }
+</style>
+
+<body>
+  <div>
+    In the northern hemisphere,
+    on <input id="date" type="date">
+    it's <span id="season"></span>.
+  </div>
+
+  <script type="module">
+    import { QuattroStagioni } from './index.js';
+
+    let qs = new QuattroStagioni()
+    update()
+    document.getElementById('date').addEventListener('change', dateChanged)
+
+    function dateChanged() {
+      let input = this.value
+      let dateEntered = new Date(input)
+      console.log(dateEntered)
+      update(dateEntered)
+    }
+
+    function update(date = new Date()) {
+      let season = qs.meteorologicalSeason(date)
+      console.log(season)
+      document.getElementById('season').innerText = season
+
+      qs.update(date)
+    }
+  </script>
+</body>

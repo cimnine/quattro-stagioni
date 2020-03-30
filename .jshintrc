@@ -1,0 +1,6 @@
+{
+  "$schema": "https://raw.githubusercontent.com/madskristensen/jshint/2.x/src/jshintrc-schema.json",
+  "lastsemic": true,
+  "asi": true,
+  "esversion": 6
+}
