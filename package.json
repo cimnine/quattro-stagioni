@@ -23,7 +23,7 @@
   "homepage": "https://github.com/cimnine/quattro-stagioni#readme",
   "devDependencies": {
     "jshint": "2.13.6",
-    "grunt": "1.5.3",
+    "grunt": "1.6.1",
     "grunt-contrib-connect": "4.0.0"
   }
 }
